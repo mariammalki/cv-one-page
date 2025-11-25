@@ -38,7 +38,8 @@ pipeline {
 
         stage('Notify Slack') {
             steps {
-                slackSend(channel: '#ci-cd', message: "✅ Pipeline terminé avec succès : ${env.JOB_NAME} #${env.BUILD_NUMBER}")
+                slackSend(channel: '#ci-cd', tokenCredentialId: 'slack-bot-token', message: "✅ Pipeline terminé")
+
             }
         }
     }
