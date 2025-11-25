@@ -3,8 +3,8 @@ pipeline {
     agent any
 
     // Déclencheur : vérifie le repo toutes les 5 minutes
-    //triggers {
-        //pollSCM('H/5 * * * *')
+    triggers {
+        pollSCM('H/5 * * * *')
     }
 
     environment {
